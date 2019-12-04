@@ -1,0 +1,125 @@
+import csv
+from datetime import datetime
+from datetime import timedelta
+
+
+class Student:
+
+    def _init_(self, num, fname, lname, email, phone, resHall, airport, time, date, airline, flightNum):
+        self.num = num
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.phone = phone
+        self.resHall = resHall
+        self.airport = airport
+        self.time = datetime.strptime(time, '%H:%M')
+        self.date = date
+        self.airline = airline
+        self.flightNum = flightNum
+
+    #for test printing
+    def __str__(self):
+        return "first name: %s, last name: %s" % (self.fname, self.lname)
+            #self.fname + " " + self.lname + " " + self.email + " " + self.phone + "\n"
+
+    def __repr__(self):
+        return str(self)
+
+def readcsv(filename):
+    ifile = open(filename, "rU")
+    reader = csv.reader(ifile, delimiter=",")
+
+    rownum = 0
+    students = []
+
+    for row in reader:
+        nstudent = Student()
+        nstudent.num = row[0]
+        nstudent.fname = row[1]
+        nstudent.lname = row[2]
+        nstudent.email = row[3]
+        nstudent.phone = row[4]
+        nstudent.resHall = row[5]
+        nstudent.airport = row[6]
+        nstudent.time = datetime.strptime(row[7], '%H:%M')
+        nstudent.date = row[8]
+        nstudent.airline = row[9]
+        nstudent.flightNum = row[10]
+        students.insert(0, nstudent)
+        rownum += 1
+
+    ifile.close()
+    return students
+
+def Match():
+
+    #students =[]
+    #nstudent = student()
+
+    students = readcsv("contact_data.csv")
+
+    #read csv and store data in students
+    #with open("contact_data.csv") as f:
+     #   reader = csv.reader(f)
+      #  next(reader)
+       # for row in reader:
+        #    nstudent.num = row[0]
+         #   nstudent.fname = row[1]
+          #  nstudent.lname = row[2]
+           # nstudent.email = row[3]
+            #nstudent.phone = row[4]
+            #nstudent.resHall = row[5]
+            #nstudent.airport = row[6]
+            #nstudent.time = datetime.strptime(row[7], '%H:%M')
+            #nstudent.date = row[8]
+            #nstudent.airline = row[9]
+            #nstudent.flightNum = row[10]
+            #print (nstudent)
+            #students.insert(0, nstudent)
+
+    i = 0
+    j = 0
+
+    #print(students)
+
+    while(i < len(students)):
+        j = i + 1
+        while(j < len(students) - 1):
+            std1 = students[i]
+            std2 = students[j]
+            if(students[i].date == students[j].date and students[i].airport == students[j].airport):
+                t1 = students[i].time
+                t2 = students[j].time
+                tdelta = t1 - t2
+
+
+                if(t1 == t2):
+                    print(students[i].fname + " " +students[i].lname + " and " + students[j].fname + " " + students[j].lname + " are a match")
+                    j += 1
+
+                elif(timedelta(minutes=-31) <= tdelta and tdelta <= timedelta(minutes=31)):
+                    print(students[i].fname + " " +students[i].lname + " and " + students[j].fname + " " + students[j].lname + " are a match")
+                    j += 1
+                else:
+                    j+= 1
+                #elif (tdelta < datetime.timedelta(0) and tdelta > datetime.timedelta(-30)):
+                 #   print(students[i].fname + " " + students[i].lname + " and " + students[j].fname + " " + students[j].lname + " are a match")
+                  #  j += 1
+            else:
+                j += 1
+        i += 1
+
+
+    return
+
+
+
+
+def main():
+    Match()
+    print ("Done")
+if __name__ == "__main__":
+    main()
+
+

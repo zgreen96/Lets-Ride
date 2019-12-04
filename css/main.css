@@ -1,0 +1,308 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+div.MyQuote{
+	display: inline-block;
+	background-color: #A2271A;
+	color: white;
+	padding: 0 10px;
+	position: absolute;
+	right: 0;
+	top: 20px
+}
+div.aboutUS{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+a.linking{
+	display: inline-block;
+	position: absolute;
+	bottom: 0%;
+	right: 5%;
+	color: white;
+	
+}
+.img-plane{
+	position: relative;
+}
+.container_ourServices{
+	background-color: #e6e6e6;
+	width: 100%;
+}
+
+.img-AboutUS{
+	height: 300px;
+	position: relative;
+	background-image: url("http://via.placeholder.com/1550x312");
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-container{
+	height: 400px;
+	position: relative;
+	background-image: url("http://via.placeholder.com/700x500");
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.img-overlay{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+}
+.img-container:hover .img-hovering{
+opacity: 1;
+}
+.img-hovering{
+	opacity: 0;
+	transition: all 0.5s ease;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 60px 60px;
+	border-color: transparent transparent #007bff transparent;
+
+}
+div.arrowp {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+i.fa.fa-long-arrow-right.arrowp{
+	position: absolute;
+	left: -25px;
+	bottom: -45px;
+	color: white;
+    
+}
+a:hover:not(.active) {
+    background-color: #007bff;
+    color: white; 
+}
+.bottomFooter{
+	padding: 15px;
+}
+.textAlign-Center{
+	text-align: center;
+}
+.textAlign-Left{
+	text-align: left;
+}
+
+.footer_container{
+	background-color: #e6e6e6;
+	width: 100%;
+}
+.toggleFooter{
+	background-color: #A2271A;
+	color: white;
+	width: 100%;
+	margin:0;
+	border: 0;
+	padding:wrap;
+}
+div.container-fluid.myNav{
+	background-color: #121111;
+}	
+.navbar-brand{
+	padding:0;
+	margin: auto;
+	position: relative;
+}
+
+.tabs-left{
+  border-bottom: none;
+  padding-top: 2px;
+}
+.tabs-left {
+  border-right: 1px solid black;
+}
+.tabs-left>li{
+  float: none;
+  margin-bottom: 2px;
+}
+.tabs-left>li {
+  margin-right: -1px;
+}
+.tabs-right>li {
+  margin-left: -1px;
+}
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: black;
+  border-top-color: black;
+  border-right-style: none;
+  border-right-color: transparent;
+  border-left: 6px solid #A2271A;
+}
+
+.tabs-left>li>a {
+  margin-right: 0;
+  display:block;
+}
+div.common_padding{
+	padding: initial;
+}
+.image-holder{
+	padding: 15px;
+	float: left;
+}
+.image-holding{
+	padding: 15px;
+	float: right;
+}
+.img-circle{
+height: auto;
+display:block;
+margin: auto;
+}
+.btn-info:hover, .btn-info:focus{
+	border-bottom-style: solid;
+	border-bottom-color: #A2271A;
+}
+img.img-responsive{
+	margin: 0 auto;
+	
+}
+div.row.accord{
+	border-bottom-style:solid;
+	border-bottom-color: black;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        text-align: center;
+        padding: initial;
+    }
+    [class*="row"] {
+        text-align: center;
+    }
+    [class*="img-"]{
+    	margin:auto;
+    }
+    .tabs-left>li{
+    	float: left;
+    	border-left: none;
+    	border-right: none;
+    	border-top: none;
+    	padding: initial;
+    }
+    a.device-width{
+    	width: 120%;
+    }
+    .tabs-left {
+  		border-right: none;
+	}
+
+.tabs-left>li.active>a,
+.tabs-left>li.active>a:hover,
+.tabs-left>li.active>a:focus {
+  border-bottom-color: #A2271A;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+	}
+}
+
+h1#title{
+	color: #9d9d9d;
+}
+
+div#PersonalInfo{
+	vertical-align: left;
+	width: 50%;
+	padding-top: 8%;
+
+}
+
+div#FlightInfo{
+	vertical-align: right;
+	width: 50%;
+	padding-top: 8%;
+	
+	
+}
+
+input[type=text]{
+	padding:7px;
+	margin: 5px;
+	width:100%;
+	border-radius: 15px;
+}
+
+select{
+	padding:7px;
+	margin: 5px;
+	width:50%;
+	border-radius: 15px;
+}
+
+input[type=submit]{
+	margin-left: -10%;
+	margin-top: 10%;
+
+}
+
+div.container#form{
+	background: url("LRPhoto.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	padding-bottom: 210px;
+
+}
+h2#instr{
+	text-align: center;
+}
+
+p.about{
+	font-size: 18px;
+}
+
+/*div#HIW{
+	background-color: darkgray;
+}*/
+
+ol{
+	font-size: 24px;
+}
+
+div.container#twoPanel{
+	background: url("cloud3.jpg");
+	/*background-repeat: no-repeat;*/
+	height:100%;
+	width:100%;
+	padding-bottom: 160px;
+}
+
+h3{
+	font-weight: bold;
+}
+
+div#HIW{
+	padding-top: 5%
+}
+
+div#Pricing{
+	padding-top: 5%;
+
+}
+
+h1#HIW{
+	margin-left: 60px;
+}
+h1#Pricing{
+	margin-left: 50px;
+}
